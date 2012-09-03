@@ -26,6 +26,9 @@
 		6D0C954C15F504CE0057E8FB /* Marker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0C954B15F504CE0057E8FB /* Marker.m */; };
 		6D0C954F15F509320057E8FB /* NSString+Repeat.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0C954E15F509320057E8FB /* NSString+Repeat.m */; };
 		6D756FFB15F535D90040AD61 /* BoardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D756FFA15F535D90040AD61 /* BoardTests.m */; };
+		6D756FFE15F536470040AD61 /* GameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D756FFD15F536470040AD61 /* GameTests.m */; };
+		6D75700115F5368B0040AD61 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D75700015F5368B0040AD61 /* Game.m */; };
+		6D75700415F537810040AD61 /* Direction.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D75700315F537800040AD61 /* Direction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,12 @@
 		6D0C954E15F509320057E8FB /* NSString+Repeat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Repeat.m"; path = "Categories/NSString+Repeat.m"; sourceTree = "<group>"; };
 		6D756FF915F535D90040AD61 /* BoardTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardTests.h; sourceTree = "<group>"; };
 		6D756FFA15F535D90040AD61 /* BoardTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardTests.m; sourceTree = "<group>"; };
+		6D756FFC15F536470040AD61 /* GameTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameTests.h; sourceTree = "<group>"; };
+		6D756FFD15F536470040AD61 /* GameTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameTests.m; sourceTree = "<group>"; };
+		6D756FFF15F5368B0040AD61 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = Models/Game.h; sourceTree = "<group>"; };
+		6D75700015F5368B0040AD61 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Game.m; path = Models/Game.m; sourceTree = "<group>"; };
+		6D75700215F537800040AD61 /* Direction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Direction.h; path = Models/Direction.h; sourceTree = "<group>"; };
+		6D75700315F537800040AD61 /* Direction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Direction.m; path = Models/Direction.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +169,8 @@
 				6D756FFA15F535D90040AD61 /* BoardTests.m */,
 				6D0C954515F4FF930057E8FB /* SenTestExtensions */,
 				6D0C952215F451990057E8FB /* Supporting Files */,
+				6D756FFC15F536470040AD61 /* GameTests.h */,
+				6D756FFD15F536470040AD61 /* GameTests.m */,
 			);
 			path = ConnectFourTests;
 			sourceTree = "<group>";
@@ -184,6 +195,10 @@
 				6D0C954815F502EB0057E8FB /* JLIndex.m */,
 				6D0C954A15F504CE0057E8FB /* Marker.h */,
 				6D0C954B15F504CE0057E8FB /* Marker.m */,
+				6D756FFF15F5368B0040AD61 /* Game.h */,
+				6D75700015F5368B0040AD61 /* Game.m */,
+				6D75700215F537800040AD61 /* Direction.h */,
+				6D75700315F537800040AD61 /* Direction.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -321,6 +336,8 @@
 				6D0C954915F502EB0057E8FB /* JLIndex.m in Sources */,
 				6D0C954C15F504CE0057E8FB /* Marker.m in Sources */,
 				6D0C954F15F509320057E8FB /* NSString+Repeat.m in Sources */,
+				6D75700115F5368B0040AD61 /* Game.m in Sources */,
+				6D75700415F537810040AD61 /* Direction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D756FFB15F535D90040AD61 /* BoardTests.m in Sources */,
+				6D756FFE15F536470040AD61 /* GameTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
