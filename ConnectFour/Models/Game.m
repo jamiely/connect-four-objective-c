@@ -15,14 +15,17 @@
 #import "Marker.h"
 
 @interface Game()
--(int) lowestEmptyRowForColumn: (NSUInteger) col;
 -(void) toggleActiveMarker;
+-(BOOL) checkIndex:(JLIndex*) index hasMarker: (Marker*) marker
+    inDirection: (Direction*) direction withSteps: (NSUInteger) steps;
+-(BOOL) isWinAtIndex: (JLIndex*) index;
 @end
 
 @implementation Game
 
 @synthesize board;
 @synthesize directions;
+@synthesize activeMarker;
 
 - (Game*) init {
     self = [super init];
@@ -43,17 +46,19 @@
     return self;
 }
 
-- (void) move: (Move*) _move {
+- (BOOL) move: (Move*) _move {
     int r = [self lowestEmptyRowForColumn: _move.column];
     
     if(r < 0) {
         NSLog(@"Warning, invalid move %@", _move);
-        return; // @todo, throw exception?
+        return NO; // @todo, throw exception?
     }
     
     JLIndex *moveIndex = [JLIndex indexWithRow:r andColumn:_move.column];
     [board moveWithMarker: activeMarker atIndex: moveIndex];
     [self toggleActiveMarker];
+    
+    return YES;
 }
 
 -(int) lowestEmptyRowForColumn: (NSUInteger) col {
@@ -70,5 +75,45 @@
 
 -(void) toggleActiveMarker {
     activeMarker = activeMarker == Marker.A ? Marker.B : Marker.A;
+}
+
+-(BOOL) checkIndex:(JLIndex*) index hasMarker: (Marker*) marker
+    inDirection: (Direction*) direction withSteps: (NSUInteger) steps {
+    if(steps == 0) return YES;
+    else if([board isInBounds: index]
+        && [board positionAt:index hasMarker:marker]) {
+        JLIndex *newIndex =
+            [JLIndex indexWithRow: index.row + direction.vertical
+                        andColumn: index.column + direction.horizontal];
+        return [self checkIndex: newIndex hasMarker:marker
+            inDirection:direction withSteps:steps-1];
+    }
+    else return NO;
+}
+-(BOOL) isWinAtIndex: (JLIndex*) index {
+    if(! [board isInBounds: index]) return NO;
+    
+    Marker *m = [board markerAtIndex: index];
+    if(m == Marker.Empty) return NO;
+    
+    BOOL __block _isWin = NO;
+    [directions enumerateObjectsUsingBlock:^(Direction *dir, NSUInteger idx, BOOL *stop) {
+        if([self checkIndex: index hasMarker: m inDirection: dir withSteps:4]) {
+            _isWin = YES;
+            (*stop) = YES;
+        }
+    }];
+    
+    return _isWin;
+}
+- (BOOL) isWin {
+    BOOL __block _isWin = FALSE;
+    [[board indices] enumerateObjectsUsingBlock:^(JLIndex *index, NSUInteger idx, BOOL *stop) {
+        if([self isWinAtIndex: index]) {
+            _isWin = YES;
+            (*stop) = YES;
+        }
+    }];
+    return _isWin;
 }
 @end

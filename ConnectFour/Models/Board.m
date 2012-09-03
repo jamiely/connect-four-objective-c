@@ -111,4 +111,17 @@
     return _indices;
 }
 
+- (NSString*) description {
+    NSMutableString *str = [NSMutableString stringWithCapacity: 250];
+    for(int r = 0; r < size.height; r ++) {
+        for(int c = 0; c < size.width; c ++) {
+            NSUInteger i = r * size.width + c;
+            Marker *m = [contents objectAtIndex: i];
+            [str appendString: m.text];
+        }
+        [str appendString: @"\n"];
+    }
+    return str;
+}
+
 @end

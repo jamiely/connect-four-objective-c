@@ -21,8 +21,11 @@
 
 @property (nonatomic, strong) Board *board;
 @property (nonatomic, strong) NSArray *directions;
+@property (nonatomic, strong) Marker *activeMarker;
 
-- (void) move: (Move*) _move;
+- (BOOL) move: (Move*) _move;
 - (Marker*) markerAtIndex: (JLIndex*) index;
+- (int) lowestEmptyRowForColumn: (NSUInteger) col;
+- (BOOL) isWin;
 
 @end
