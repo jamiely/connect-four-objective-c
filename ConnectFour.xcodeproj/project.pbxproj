@@ -23,9 +23,9 @@
 		6D0C952915F451990057E8FB /* ConnectFourTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0C952815F451990057E8FB /* ConnectFourTests.m */; };
 		6D0C953915F454260057E8FB /* Board.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0C953815F454260057E8FB /* Board.m */; };
 		6D0C953F15F456B40057E8FB /* JLSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0C953E15F456B40057E8FB /* JLSize.m */; };
-		6D0C954315F4E2CC0057E8FB /* NSString+Repeat.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0C954215F4E2CC0057E8FB /* NSString+Repeat.m */; };
 		6D0C954915F502EB0057E8FB /* JLIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0C954815F502EB0057E8FB /* JLIndex.m */; };
 		6D0C954C15F504CE0057E8FB /* Marker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0C954B15F504CE0057E8FB /* Marker.m */; };
+		6D0C954F15F509320057E8FB /* NSString+Repeat.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0C954E15F509320057E8FB /* NSString+Repeat.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,13 +63,13 @@
 		6D0C953815F454260057E8FB /* Board.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Board.m; path = Models/Board.m; sourceTree = "<group>"; };
 		6D0C953D15F456B40057E8FB /* JLSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JLSize.h; path = Models/JLSize.h; sourceTree = "<group>"; };
 		6D0C953E15F456B40057E8FB /* JLSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JLSize.m; path = Models/JLSize.m; sourceTree = "<group>"; };
-		6D0C954115F4E2CC0057E8FB /* NSString+Repeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Repeat.h"; path = "ConnectFourTests/NSString+Repeat.h"; sourceTree = SOURCE_ROOT; };
-		6D0C954215F4E2CC0057E8FB /* NSString+Repeat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Repeat.m"; path = "ConnectFourTests/NSString+Repeat.m"; sourceTree = SOURCE_ROOT; };
 		6D0C954615F4FFB10057E8FB /* STExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STExtensions.h; sourceTree = "<group>"; };
 		6D0C954715F502EB0057E8FB /* JLIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JLIndex.h; path = Models/JLIndex.h; sourceTree = "<group>"; };
 		6D0C954815F502EB0057E8FB /* JLIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JLIndex.m; path = Models/JLIndex.m; sourceTree = "<group>"; };
 		6D0C954A15F504CE0057E8FB /* Marker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Marker.h; path = Models/Marker.h; sourceTree = "<group>"; };
 		6D0C954B15F504CE0057E8FB /* Marker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Marker.m; path = Models/Marker.m; sourceTree = "<group>"; };
+		6D0C954D15F509320057E8FB /* NSString+Repeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Repeat.h"; path = "Categories/NSString+Repeat.h"; sourceTree = "<group>"; };
+		6D0C954E15F509320057E8FB /* NSString+Repeat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Repeat.m"; path = "Categories/NSString+Repeat.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,8 +191,8 @@
 		6D0C954415F4FE4E0057E8FB /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				6D0C954115F4E2CC0057E8FB /* NSString+Repeat.h */,
-				6D0C954215F4E2CC0057E8FB /* NSString+Repeat.m */,
+				6D0C954D15F509320057E8FB /* NSString+Repeat.h */,
+				6D0C954E15F509320057E8FB /* NSString+Repeat.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -320,6 +320,7 @@
 				6D0C953F15F456B40057E8FB /* JLSize.m in Sources */,
 				6D0C954915F502EB0057E8FB /* JLIndex.m in Sources */,
 				6D0C954C15F504CE0057E8FB /* Marker.m in Sources */,
+				6D0C954F15F509320057E8FB /* NSString+Repeat.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +329,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D0C952915F451990057E8FB /* ConnectFourTests.m in Sources */,
-				6D0C954315F4E2CC0057E8FB /* NSString+Repeat.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
