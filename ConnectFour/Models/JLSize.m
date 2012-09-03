@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 Jamie Ly. All rights reserved.
 //
 
-#import "Size.h"
+#import "JLSize.h"
 
 @implementation JLSize
 

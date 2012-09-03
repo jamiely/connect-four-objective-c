@@ -22,7 +22,7 @@
 		6D0C952615F451990057E8FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D0C952415F451990057E8FB /* InfoPlist.strings */; };
 		6D0C952915F451990057E8FB /* ConnectFourTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0C952815F451990057E8FB /* ConnectFourTests.m */; };
 		6D0C953915F454260057E8FB /* Board.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0C953815F454260057E8FB /* Board.m */; };
-		6D0C953C15F4551B0057E8FB /* Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0C953B15F4551B0057E8FB /* Size.m */; };
+		6D0C953F15F456B40057E8FB /* JLSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0C953E15F456B40057E8FB /* JLSize.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +58,8 @@
 		6D0C952815F451990057E8FB /* ConnectFourTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConnectFourTests.m; sourceTree = "<group>"; };
 		6D0C953715F454260057E8FB /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Board.h; path = Models/Board.h; sourceTree = "<group>"; };
 		6D0C953815F454260057E8FB /* Board.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Board.m; path = Models/Board.m; sourceTree = "<group>"; };
-		6D0C953A15F4551B0057E8FB /* Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Size.h; path = Models/Size.h; sourceTree = "<group>"; };
-		6D0C953B15F4551B0057E8FB /* Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Size.m; path = Models/Size.m; sourceTree = "<group>"; };
+		6D0C953D15F456B40057E8FB /* JLSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JLSize.h; path = Models/JLSize.h; sourceTree = "<group>"; };
+		6D0C953E15F456B40057E8FB /* JLSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JLSize.m; path = Models/JLSize.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,10 +164,10 @@
 		6D0C953615F454150057E8FB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6D0C953D15F456B40057E8FB /* JLSize.h */,
+				6D0C953E15F456B40057E8FB /* JLSize.m */,
 				6D0C953715F454260057E8FB /* Board.h */,
 				6D0C953815F454260057E8FB /* Board.m */,
-				6D0C953A15F4551B0057E8FB /* Size.h */,
-				6D0C953B15F4551B0057E8FB /* Size.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -284,7 +284,7 @@
 				6D0C950B15F451990057E8FB /* AppDelegate.m in Sources */,
 				6D0C951415F451990057E8FB /* ViewController.m in Sources */,
 				6D0C953915F454260057E8FB /* Board.m in Sources */,
-				6D0C953C15F4551B0057E8FB /* Size.m in Sources */,
+				6D0C953F15F456B40057E8FB /* JLSize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

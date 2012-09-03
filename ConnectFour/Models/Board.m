@@ -7,7 +7,7 @@
 //
 
 #import "Board.h"
-#import "Size.h"
+#import "JLSize.h"
 
 @implementation Board
 

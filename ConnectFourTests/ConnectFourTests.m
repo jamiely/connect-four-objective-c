@@ -8,7 +8,7 @@
 
 #import "ConnectFourTests.h"
 #import "Board.h"
-#import "Size.h"
+#import "JLSize.h"
 
 @implementation ConnectFourTests
 
