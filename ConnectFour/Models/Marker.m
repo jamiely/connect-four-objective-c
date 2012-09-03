@@ -10,4 +10,21 @@
 
 @implementation Marker
 
++ (Marker*) A {
+    static Marker *a = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        a = [[Marker alloc] init];
+    });
+    return a;
+}
+
++ (Marker*) B {
+    static Marker *b = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        b = [[Marker alloc] init];
+    });
+    return b;
+}
 @end

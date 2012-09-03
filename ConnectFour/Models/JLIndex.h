@@ -15,4 +15,6 @@
 
 - (JLIndex*) initWithRow: (NSUInteger) _row andColumn: (NSUInteger) _column;
 
++ (JLIndex*) indexWithRow: (NSUInteger) _row andColumn: (NSUInteger) _column;
+
 @end

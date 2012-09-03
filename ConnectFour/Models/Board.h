@@ -21,7 +21,13 @@
 
 - (NSArray *) contentsAsArray;
 - (BOOL) isEmpty;
-- (void) moveWithMarker: (Marker*) marker atIndex: (JLIndex*) index;
+- (BOOL) moveWithMarker: (Marker*) marker atIndex: (JLIndex*) index;
 - (BOOL) positionAt: (JLIndex*) index hasMarker: (Marker*) marker;
+- (BOOL) isInBounds: (JLIndex*) index;
+- (NSUInteger) indexToInt: (JLIndex*) index;
+- (Marker*) updatePosition: (NSUInteger) position withMarker: (Marker*) marker;
+- (Marker*) markerAtIndex: (JLIndex*) index;
+- (BOOL) hasAvailableMoves;
+- (NSArray*) indices;
 
 @end

@@ -10,4 +10,7 @@
 
 @interface Marker : NSObject
 
++ (Marker*) A;
++ (Marker*) B;
+
 @end

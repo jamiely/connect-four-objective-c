@@ -46,9 +46,17 @@
     return empty;
 }
 
-- (void) moveWithMarker: (Marker*) marker atIndex: (JLIndex*) index {
+- (BOOL) moveWithMarker: (Marker*) marker atIndex: (JLIndex*) index {
     NSUInteger i = [self indexToInt:index];
+    
+    // Must be within bounds
+    if(i >= contents.count) return NO;
+    
+    // Must be an empty position
+    if([contents objectAtIndex: i] != @"") return NO;
+    
     [contents replaceObjectAtIndex: i withObject: marker];
+    return YES;
 }
 
 - (BOOL) positionAt: (JLIndex*) index hasMarker: (Marker*) marker {
@@ -57,6 +65,50 @@
 
 - (NSUInteger) indexToInt: (JLIndex*) index {
     return index.row * size.width + index.column;
+}
+
+- (BOOL) isInBounds: (JLIndex*) index {
+    return index.row < size.height && index.column < size.width;
+}
+
+- (Marker*) updatePosition: (NSUInteger) position withMarker: (Marker*) marker {
+    if(position >= contents.count) return nil;
+    
+    [contents replaceObjectAtIndex: position withObject: marker];
+    return marker;
+}
+
+- (Marker*) markerAtIndex: (JLIndex*) index {
+    if(! [self isInBounds: index]) return nil;
+    
+    return [contents objectAtIndex: [self indexToInt: index]];
+}
+
+- (BOOL) hasAvailableMoves {
+    BOOL __block hasMoves = false;
+    [contents enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        hasMoves = hasMoves || obj == @"";
+        if(hasMoves) {
+            (*stop) = YES;
+            NSLog(@"Stopped checking available moves at position %d",  idx);
+        }
+    }];
+    return hasMoves;
+}
+
+- (NSArray*) indices {
+    static NSArray *_indices = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSMutableArray *a = [NSMutableArray array];
+        for(uint r = 0; r < size.height; r++) {
+            for(uint c = 0; c < size.width; c++) {
+                [a addObject: [JLIndex indexWithRow: r andColumn: c]];
+            }
+        }
+        _indices = [NSArray arrayWithArray: a];
+    });
+    return _indices;
 }
 
 @end
