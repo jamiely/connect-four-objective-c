@@ -58,6 +58,38 @@
     
 }
 
+- (void) testShouldDetectHorizontalMatch {
+    for(int i= 1; i < 4; i++) {
+        Move *m = [Move moveWithColumn: i];
+        STAssertTrue([game move: m], @"Move made by A");
+        STAssertTrue([game move: m], @"Move made by B");
+    }
+    STAssertFalse([game isWin], @"No winner yet");
+    [game move: [Move moveWithColumn: 4]];
+    STAssertTrue([game isWin], @"Someone has won");
+    NSLog(@"Horizontal match: %@", game.board);
+}
+
+- (void) testShouldDetectDiagonalMatch {
+    for(int i= 0; i < 4; i++) {
+        Move *m = [Move moveWithColumn: i];
+        for(int j = 0; j < i; j++) {
+            [game move: m];
+        }
+        NSLog(@"Diagonal match %d: %@", i, game.board);
+    }
+    STAssertFalse([game isWin], @"No winner yet");
+    
+    for(int i=0; i < 3; i++) {
+        Move *m = [Move moveWithColumn: i];
+        [game move: m];
+        [game move: m];
+    }
+    STAssertFalse([game isWin], @"No winner yet");
+    [game move: [Move moveWithColumn: 3]];
+    STAssertTrue([game isWin], @"Someone has won");
+}
+
 - (void) testShouldNotAllowMoveInFullColumn {
     Move *move = [Move moveWithColumn: 1];
     STAssertTrue([game move: move], @"Move Okay");
