@@ -10,7 +10,7 @@
 #import "JLSize.h"
 #import "JLIndex.h"
 #import "Marker.h"
-#import "NSString+Repeat.h"
+#import "NSArray+Repeat.h"
 
 @interface Board ()
 
@@ -30,7 +30,7 @@
     size.height = 6;
     
     contents = [NSMutableArray arrayWithArray:
-        [@"" repeat: size.width * size.height]];
+        [NSArray arrayOf: Marker.Empty repeated: size.width * size.height]];
     
     return self;
 }
@@ -42,7 +42,7 @@
 - (BOOL) isEmpty {
     BOOL empty = YES;
     for(int i=0, c=contents.count; i < c; i ++)
-        empty = empty && [contents objectAtIndex:i] == @"";
+        empty = empty && [contents objectAtIndex:i] == Marker.Empty;
     return empty;
 }
 
@@ -53,7 +53,7 @@
     if(i >= contents.count) return NO;
     
     // Must be an empty position
-    if([contents objectAtIndex: i] != @"") return NO;
+    if([contents objectAtIndex: i] != Marker.Empty) return NO;
     
     [contents replaceObjectAtIndex: i withObject: marker];
     return YES;
@@ -87,7 +87,7 @@
 - (BOOL) hasAvailableMoves {
     BOOL __block hasMoves = false;
     [contents enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        hasMoves = hasMoves || obj == @"";
+        hasMoves = hasMoves || obj == Marker.Empty;
         if(hasMoves) {
             (*stop) = YES;
             NSLog(@"Stopped checking available moves at position %d",  idx);

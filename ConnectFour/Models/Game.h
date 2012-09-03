@@ -9,13 +9,20 @@
 #import <Foundation/Foundation.h>
 
 @class Board;
+@class Move;
+@class Marker;
+@class JLIndex;
 
 @interface Game : NSObject {
     Board *board;
     NSArray *directions;
+    Marker *activeMarker;
 }
 
 @property (nonatomic, strong) Board *board;
 @property (nonatomic, strong) NSArray *directions;
+
+- (void) move: (Move*) _move;
+- (Marker*) markerAtIndex: (JLIndex*) index;
 
 @end

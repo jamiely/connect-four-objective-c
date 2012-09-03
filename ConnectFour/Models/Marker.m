@@ -15,6 +15,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         a = [[Marker alloc] init];
+        a.text = @"X";
     });
     return a;
 }
@@ -24,6 +25,17 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         b = [[Marker alloc] init];
+        b.text = @"O";
+    });
+    return b;
+}
+
++ (Marker*) Empty {
+    static Marker *b = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        b = [[Marker alloc] init];
+        b.text = @" ";
     });
     return b;
 }

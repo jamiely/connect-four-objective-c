@@ -10,7 +10,7 @@
 #import "Board.h"
 #import "JLSize.h"
 #import "JLIndex.h"
-#import "NSString+Repeat.h"
+#import "NSArray+Repeat.h"
 #import "STExtensions.h"
 #import "Marker.h"
 
@@ -44,7 +44,7 @@
 }
 
 - (void) testShouldMatchAnEmptyBoard {
-    NSArray *empty = [@"" repeat: 42];
+    NSArray *empty = [NSArray arrayOf: Marker.Empty repeated: 42];
     STAssertArraysEqual(empty, [board contentsAsArray], @"Board contents are empty");
 }
 

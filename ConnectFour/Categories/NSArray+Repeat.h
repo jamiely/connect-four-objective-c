@@ -1,5 +1,5 @@
 //
-//  Marker.h
+//  NSArray+Repeat.h
 //  ConnectFour
 //
 //  Created by Jamie Ly on 03/09/2012.
@@ -8,12 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Marker : NSObject
+@interface NSArray (Repeat)
 
-@property (nonatomic, strong) NSString *text;
-
-+ (Marker*) A;
-+ (Marker*) B;
-+ (Marker*) Empty;
++ (NSArray*) arrayOf: (id) obj repeated: (NSUInteger) times;
 
 @end
