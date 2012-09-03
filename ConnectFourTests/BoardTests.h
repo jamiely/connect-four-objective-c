@@ -10,7 +10,7 @@
 
 @class Board;
 
-@interface ConnectFourTests : SenTestCase {
+@interface BoardTests : SenTestCase {
     Board *board;
 }
 

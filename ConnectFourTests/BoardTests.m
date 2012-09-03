@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 Jamie Ly. All rights reserved.
 //
 
-#import "ConnectFourTests.h"
+#import "BoardTests.h"
 #import "Board.h"
 #import "JLSize.h"
 #import "JLIndex.h"
@@ -14,12 +14,12 @@
 #import "STExtensions.h"
 #import "Marker.h"
 
-@interface ConnectFourTests()
+@interface BoardTests()
 - (NSArray *) stringToIndices: (NSString*) s;
 - (NSUInteger) strToUInt: (NSString*) s;
 @end
 
-@implementation ConnectFourTests
+@implementation BoardTests
 
 - (void)setUp
 {
