@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @class Board;
+@class JLIndex;
+
 @protocol BoardViewDelegate;
 
 @interface BoardView : UIView {
@@ -28,7 +30,7 @@
 @property (nonatomic, strong) id<BoardViewDelegate> delegate;
 
 - (id) initWithFrame: (CGRect) frame andBoard: (Board*) _board;
-
+- (void) updateIndex: (JLIndex*) index;
 @end
 
 @protocol BoardViewDelegate <NSObject>

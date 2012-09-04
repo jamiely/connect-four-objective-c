@@ -26,6 +26,7 @@
 @synthesize board;
 @synthesize directions;
 @synthesize activeMarker;
+@synthesize lastIndex;
 
 - (Game*) init {
     self = [super init];
@@ -54,8 +55,8 @@
         return NO; // @todo, throw exception?
     }
     
-    JLIndex *moveIndex = [JLIndex indexWithRow:r andColumn:_move.column];
-    [board moveWithMarker: activeMarker atIndex: moveIndex];
+    lastIndex = [JLIndex indexWithRow:r andColumn:_move.column];
+    [board moveWithMarker: activeMarker atIndex: lastIndex];
     [self toggleActiveMarker];
     
     return YES;

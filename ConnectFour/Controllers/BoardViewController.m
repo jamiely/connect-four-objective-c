@@ -8,6 +8,7 @@
 
 #import "BoardViewController.h"
 #import "JLSize.h"
+#import "Move.h"
 #import "Game.h"
 #import "Board.h"
 #import "JLIndex.h"
@@ -48,10 +49,18 @@
 }
 
 - (void) boardView:(BoardView *)_boardView didSelectColumn:(NSUInteger)column {
-    // do something
-    NSString *message = [NSString stringWithFormat:@"Column %d selected", column];
-    [[[UIAlertView alloc] initWithTitle:@"Alert" message:message
-        delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    Move *move = [Move moveWithColumn: column];
+    if([game move: move]) {
+        [boardView updateIndex: game.lastIndex];
+    }
+    else {
+        [[[UIAlertView alloc] initWithTitle:@"Alert"
+                                    message: @"That column is full."
+                                   delegate:nil
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil]
+                          show];
+    }
 }
 
 @end

@@ -8,6 +8,7 @@
 
 #import "BoardView.h"
 #import "Board.h"
+#import "Marker.h"
 #import "JLSize.h"
 #import "JLIndex.h"
 #import "IndexView.h"
@@ -84,4 +85,24 @@
         [delegate boardView: self didSelectColumn: indexView.index.column];
     }
 }
+
+- (void) updateIndex: (JLIndex*) index {
+    NSUInteger i = [board indexToInt: index];
+    
+    Marker *marker = [board markerAtIndex: index];
+    UIImage *newImage = nil;
+    if(marker == Marker.A) {
+        newImage = imageA;
+    }
+    else if(marker == Marker.B) {
+        newImage = imageB;
+    }
+    else {
+        newImage = imageEmpty; // this shouldn't happen
+    }
+    
+    IndexView *iv = [positionViews objectAtIndex: i];
+    iv.image = newImage;
+}
+
 @end

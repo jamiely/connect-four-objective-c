@@ -17,11 +17,13 @@
     Board *board;
     NSArray *directions;
     Marker *activeMarker;
+    JLIndex *lastIndex;
 }
 
 @property (nonatomic, strong) Board *board;
 @property (nonatomic, strong) NSArray *directions;
 @property (nonatomic, strong) Marker *activeMarker;
+@property (nonatomic, strong) JLIndex *lastIndex;
 
 - (BOOL) move: (Move*) _move;
 - (Marker*) markerAtIndex: (JLIndex*) index;

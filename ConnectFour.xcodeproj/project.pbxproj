@@ -32,6 +32,8 @@
 		6D181E5F15F53A8C005050B5 /* GamePlayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D181E5E15F53A8C005050B5 /* GamePlayTests.m */; };
 		6D181E6315F53BA5005050B5 /* Move.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D181E6215F53BA5005050B5 /* Move.m */; };
 		6D181E6615F53E18005050B5 /* NSArray+Repeat.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D181E6515F53E18005050B5 /* NSArray+Repeat.m */; };
+		6D49D9C215F5895F004359C4 /* a.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D49D9C015F5895F004359C4 /* a.png */; };
+		6D49D9C315F5895F004359C4 /* b.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D49D9C115F5895F004359C4 /* b.png */; };
 		6D756FFB15F535D90040AD61 /* BoardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D756FFA15F535D90040AD61 /* BoardTests.m */; };
 		6D756FFE15F536470040AD61 /* GameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D756FFD15F536470040AD61 /* GameTests.m */; };
 		6D75700115F5368B0040AD61 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D75700015F5368B0040AD61 /* Game.m */; };
@@ -91,6 +93,8 @@
 		6D181E6215F53BA5005050B5 /* Move.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Move.m; path = Models/Move.m; sourceTree = "<group>"; };
 		6D181E6415F53E18005050B5 /* NSArray+Repeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+Repeat.h"; path = "Categories/NSArray+Repeat.h"; sourceTree = "<group>"; };
 		6D181E6515F53E18005050B5 /* NSArray+Repeat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Repeat.m"; path = "Categories/NSArray+Repeat.m"; sourceTree = "<group>"; };
+		6D49D9C015F5895F004359C4 /* a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a.png; sourceTree = "<group>"; };
+		6D49D9C115F5895F004359C4 /* b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b.png; sourceTree = "<group>"; };
 		6D756FF915F535D90040AD61 /* BoardTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardTests.h; sourceTree = "<group>"; };
 		6D756FFA15F535D90040AD61 /* BoardTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardTests.m; sourceTree = "<group>"; };
 		6D756FFC15F536470040AD61 /* GameTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameTests.h; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 		6D0299F015F57230006FD886 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				6D49D9C015F5895F004359C4 /* a.png */,
+				6D49D9C115F5895F004359C4 /* b.png */,
 				6D0299F115F57230006FD886 /* empty.png */,
 			);
 			path = Assets;
@@ -352,6 +358,8 @@
 				6D0C950E15F451990057E8FB /* MainStoryboard_iPhone.storyboard in Resources */,
 				6D0C951115F451990057E8FB /* MainStoryboard_iPad.storyboard in Resources */,
 				6D0299F215F57230006FD886 /* empty.png in Resources */,
+				6D49D9C215F5895F004359C4 /* a.png in Resources */,
+				6D49D9C315F5895F004359C4 /* b.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
