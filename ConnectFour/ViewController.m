@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "BoardViewController.h"
+#import "Game.h"
 
 @interface ViewController ()
 
@@ -33,6 +35,13 @@
     } else {
         return YES;
     }
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if(! [segue.destinationViewController isKindOfClass: [BoardViewController class]]) return;
+    
+    BoardViewController *controller = segue.destinationViewController;
+    controller.game = [[Game alloc] init];
 }
 
 @end

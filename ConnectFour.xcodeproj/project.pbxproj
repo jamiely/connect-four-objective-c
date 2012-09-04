@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D0299EF15F559C0006FD886 /* BoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0299EE15F559C0006FD886 /* BoardViewController.m */; };
+		6D0299F215F57230006FD886 /* empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D0299F115F57230006FD886 /* empty.png */; };
+		6D0299F615F5792C006FD886 /* BoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0299F515F5792C006FD886 /* BoardView.m */; };
+		6D0299F915F579CF006FD886 /* IndexView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0299F815F579CF006FD886 /* IndexView.m */; };
 		6D0C94FB15F451990057E8FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0C94FA15F451990057E8FB /* UIKit.framework */; };
 		6D0C94FD15F451990057E8FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0C94FC15F451990057E8FB /* Foundation.framework */; };
 		6D0C94FF15F451990057E8FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0C94FE15F451990057E8FB /* CoreGraphics.framework */; };
@@ -45,6 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D0299ED15F559C0006FD886 /* BoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BoardViewController.h; path = Controllers/BoardViewController.h; sourceTree = "<group>"; };
+		6D0299EE15F559C0006FD886 /* BoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BoardViewController.m; path = Controllers/BoardViewController.m; sourceTree = "<group>"; };
+		6D0299F115F57230006FD886 /* empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = empty.png; sourceTree = "<group>"; };
+		6D0299F415F5792C006FD886 /* BoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BoardView.h; path = Views/BoardView.h; sourceTree = "<group>"; };
+		6D0299F515F5792C006FD886 /* BoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BoardView.m; path = Views/BoardView.m; sourceTree = "<group>"; };
+		6D0299F715F579CF006FD886 /* IndexView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IndexView.h; path = Views/IndexView.h; sourceTree = "<group>"; };
+		6D0299F815F579CF006FD886 /* IndexView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IndexView.m; path = Views/IndexView.m; sourceTree = "<group>"; };
 		6D0C94F615F451990057E8FB /* ConnectFour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConnectFour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D0C94FA15F451990057E8FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6D0C94FC15F451990057E8FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -114,6 +125,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D0299EC15F559A3006FD886 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6D0299ED15F559C0006FD886 /* BoardViewController.h */,
+				6D0299EE15F559C0006FD886 /* BoardViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		6D0299F015F57230006FD886 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				6D0299F115F57230006FD886 /* empty.png */,
+			);
+			path = Assets;
+			sourceTree = SOURCE_ROOT;
+		};
+		6D0299F315F57916006FD886 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6D0299F415F5792C006FD886 /* BoardView.h */,
+				6D0299F515F5792C006FD886 /* BoardView.m */,
+				6D0299F715F579CF006FD886 /* IndexView.h */,
+				6D0299F815F579CF006FD886 /* IndexView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		6D0C94EB15F451990057E8FB = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +186,9 @@
 		6D0C950015F451990057E8FB /* ConnectFour */ = {
 			isa = PBXGroup;
 			children = (
+				6D0299F315F57916006FD886 /* Views */,
+				6D0299F015F57230006FD886 /* Assets */,
+				6D0299EC15F559A3006FD886 /* Controllers */,
 				6D0C954415F4FE4E0057E8FB /* Categories */,
 				6D0C953615F454150057E8FB /* Models */,
 				6D0C950915F451990057E8FB /* AppDelegate.h */,
@@ -309,6 +351,7 @@
 				6D0C950515F451990057E8FB /* InfoPlist.strings in Resources */,
 				6D0C950E15F451990057E8FB /* MainStoryboard_iPhone.storyboard in Resources */,
 				6D0C951115F451990057E8FB /* MainStoryboard_iPad.storyboard in Resources */,
+				6D0299F215F57230006FD886 /* empty.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +398,9 @@
 				6D75700415F537810040AD61 /* Direction.m in Sources */,
 				6D181E6315F53BA5005050B5 /* Move.m in Sources */,
 				6D181E6615F53E18005050B5 /* NSArray+Repeat.m in Sources */,
+				6D0299EF15F559C0006FD886 /* BoardViewController.m in Sources */,
+				6D0299F615F5792C006FD886 /* BoardView.m in Sources */,
+				6D0299F915F579CF006FD886 /* IndexView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
