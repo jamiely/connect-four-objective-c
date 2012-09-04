@@ -45,7 +45,11 @@
 }
 
 - (void) setupGame {
-    boardView = [[BoardView alloc] initWithFrame: self.view.frame andBoard: game.board];
+    CGRect frame = self.view.frame;
+    frame.origin = CGPointMake(0, 0);
+    frame.size.height -= 50;
+    
+    boardView = [[BoardView alloc] initWithFrame: frame andBoard: game.board];
     [self.view addSubview: boardView];
     boardView.delegate = self;
 }

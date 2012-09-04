@@ -42,9 +42,9 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UFW-4M-hOK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="6md-HG-jol" customClass="BoardViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qK8-87-7hn">
+                    <view key="view" contentMode="scaleToFill" id="Wkj-6G-ZLl">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ofj-mj-f7I"/>
