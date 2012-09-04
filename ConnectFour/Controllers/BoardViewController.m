@@ -9,6 +9,7 @@
 #import "BoardViewController.h"
 #import "JLSize.h"
 #import "Move.h"
+#import "Marker.h"
 #import "Game.h"
 #import "Board.h"
 #import "JLIndex.h"
@@ -16,6 +17,7 @@
 
 @interface BoardViewController ()
 - (void) setupGame;
+- (void) alert: (NSString*) message;
 @end
 
 @implementation BoardViewController
@@ -54,13 +56,21 @@
         [boardView updateIndex: game.lastIndex];
     }
     else {
-        [[[UIAlertView alloc] initWithTitle:@"Alert"
-                                    message: @"That column is full."
-                                   delegate:nil
-                          cancelButtonTitle:@"OK"
-                          otherButtonTitles:nil]
-                          show];
+        [self alert: @"That column is full"];
     }
+    
+    if([game isWin]) {
+        [self alert: [NSString stringWithFormat:@"The game has been won by %@!", game.inactiveMarker]];
+    }
+}
+
+- (void) alert:(NSString *)message {
+    [[[UIAlertView alloc] initWithTitle:@"Alert"
+                                message: message
+                               delegate:nil
+                      cancelButtonTitle:@"OK"
+                      otherButtonTitles:nil]
+                      show];
 }
 
 @end

@@ -26,6 +26,7 @@
 @synthesize board;
 @synthesize directions;
 @synthesize activeMarker;
+@synthesize inactiveMarker;
 @synthesize lastIndex;
 
 - (Game*) init {
@@ -43,6 +44,7 @@
         Direction.SouthEast
         , nil];
     activeMarker = Marker.A;
+    inactiveMarker = Marker.B;
     
     return self;
 }
@@ -75,7 +77,9 @@
 }
 
 -(void) toggleActiveMarker {
-    activeMarker = activeMarker == Marker.A ? Marker.B : Marker.A;
+    Marker *tmp = inactiveMarker;
+    inactiveMarker = activeMarker;
+    activeMarker = tmp;
 }
 
 -(BOOL) checkIndex:(JLIndex*) index hasMarker: (Marker*) marker

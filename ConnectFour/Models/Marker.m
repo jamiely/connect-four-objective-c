@@ -10,6 +10,10 @@
 
 @implementation Marker
 
+- (NSString*) description {
+    return self.text;
+}
+
 + (Marker*) A {
     static Marker *a = nil;
     static dispatch_once_t onceToken;
