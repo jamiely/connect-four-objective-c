@@ -23,7 +23,7 @@
 }
 
 - (NSString*) description {
-    return [NSString stringWithFormat: @"<Row: %d Column: %d>", self.row, self.column];
+    return [NSString stringWithFormat: @"Row: %d Column: %d", self.row, self.column];
 }
 
 + (JLIndex*) indexWithRow: (NSUInteger) _row andColumn: (NSUInteger) _column {

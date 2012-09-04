@@ -7,6 +7,7 @@
 //
 
 #import "IndexView.h"
+#import "JLIndex.h"
 
 @implementation IndexView
 
@@ -22,6 +23,11 @@
         self.userInteractionEnabled = YES;
     }
     return self;
+}
+
+- (NSString*) accessibilityLabel {
+    return [NSString stringWithFormat:@"Index (%@) Image (%@)",
+        index, [super accessibilityLabel]];
 }
 
 @end
