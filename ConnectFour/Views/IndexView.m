@@ -27,7 +27,7 @@
 
 - (NSString*) accessibilityLabel {
     return [NSString stringWithFormat:@"Index (%@) Image (%@)",
-        index, [super accessibilityLabel]];
+        index, [[[super accessibilityLabel] lastPathComponent] stringByDeletingPathExtension]];
 }
 
 @end
