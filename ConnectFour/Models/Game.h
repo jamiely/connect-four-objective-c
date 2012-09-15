@@ -15,14 +15,12 @@
 
 @interface Game : NSObject {
     Board *board;
-    NSArray *directions;
     Marker *activeMarker;
     Marker *inactiveMarker;
     JLIndex *lastIndex;
 }
 
 @property (nonatomic, strong) Board *board;
-@property (nonatomic, strong) NSArray *directions;
 @property (nonatomic, strong) Marker *activeMarker;
 @property (nonatomic, strong) Marker *inactiveMarker;
 @property (nonatomic, strong) JLIndex *lastIndex;

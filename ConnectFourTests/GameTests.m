@@ -22,18 +22,4 @@
     STAssertNotNil(game.board, @"A game should have a board");
 }
 
-- (void) testShouldHaveDirections {
-    NSArray *directions = [NSArray arrayWithObjects: 
-        Direction.North,
-        Direction.South,
-        Direction.East,
-        Direction.West,
-        Direction.NorthWest,
-        Direction.NorthEast,
-        Direction.SouthWest,
-        Direction.SouthEast
-        , nil];
-    STAssertArraysEqual(directions, game.directions, @"Game has directions");
-}
-
 @end

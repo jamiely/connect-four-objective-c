@@ -19,12 +19,13 @@
 -(BOOL) checkIndex:(JLIndex*) index hasMarker: (Marker*) marker
     inDirection: (Direction*) direction withSteps: (NSUInteger) steps;
 -(BOOL) isWinAtIndex: (JLIndex*) index;
+
++ (NSArray*) directions;
 @end
 
 @implementation Game
 
 @synthesize board;
-@synthesize directions;
 @synthesize activeMarker;
 @synthesize inactiveMarker;
 @synthesize lastIndex;
@@ -33,16 +34,7 @@
     self = [super init];
     
     board = [[Board alloc] init];
-    directions = [NSArray arrayWithObjects: 
-        Direction.North,
-        Direction.South,
-        Direction.East,
-        Direction.West,
-        Direction.NorthWest,
-        Direction.NorthEast,
-        Direction.SouthWest,
-        Direction.SouthEast
-        , nil];
+
     activeMarker = Marker.A;
     inactiveMarker = Marker.B;
     
@@ -102,7 +94,7 @@
     if(m == Marker.Empty) return NO;
     
     BOOL __block _isWin = NO;
-    [directions enumerateObjectsUsingBlock:^(Direction *dir, NSUInteger idx, BOOL *stop) {
+    [[Game directions] enumerateObjectsUsingBlock:^(Direction *dir, NSUInteger idx, BOOL *stop) {
         if([self checkIndex: index hasMarker: m inDirection: dir withSteps:4]) {
             _isWin = YES;
             (*stop) = YES;
@@ -120,5 +112,23 @@
         }
     }];
     return _isWin;
+}
+
++ (NSArray*) directions {
+    static NSArray *_dir = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _dir =  @[
+            Direction.North,
+            Direction.South,
+            Direction.East,
+            Direction.West,
+            Direction.NorthWest,
+            Direction.NorthEast,
+            Direction.SouthWest,
+            Direction.SouthEast
+            ];
+    });
+    return _dir;
 }
 @end
