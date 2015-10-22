@@ -1,3 +1,7 @@
+# Connect Four
+
+[![Build Status](https://travis-ci.org/jamiely/connect-four-objective-c.svg?branch=master)](https://travis-ci.org/jamiely/connect-four-objective-c)
+
 # Intro
 
 Another Connect Four implementation. See my others in Coffeescript and
